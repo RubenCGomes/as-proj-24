@@ -1,0 +1,6 @@
+# Exclude IDE files
+.idea
+.vscode
+
+# Exclude backup files
+*.vpp.bak*
