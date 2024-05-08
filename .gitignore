@@ -4,3 +4,6 @@
 
 # Exclude backup files
 *.vpp.bak*
+
+# Exclude custom scripts
+clear-bak.sh
