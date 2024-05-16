@@ -1,0 +1,16 @@
+{
+  "logins": [
+    {
+      "username": "admin",
+      "email": "admin@onebox.com",
+      "password": "admin",
+      "isAdministrator": true
+    },
+    {
+      "username": "user",
+      "email": "user@domain.com",
+      "password": "user",
+      "isAdministrator": false
+    }
+  ]
+}

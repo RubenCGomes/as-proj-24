@@ -1,0 +1,39 @@
+{
+  "$id": "logins",
+  "$schema": "logins.schema.json",
+  "title": "Logins",
+  "description": "A list of logins for the system",
+  "type": "object",
+  "properties": {
+    "logins": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "description": "The username of the user"
+          },
+          "password": {
+            "type": "string",
+            "description": "The password of the user"
+          },
+          "isAdministrator": {
+            "type": "boolean",
+            "description": "Flag for admin user"
+          },
+          "email": {
+            "type": "string",
+            "description": "The email of the user"
+          }
+        },
+        "required": [
+          "username",
+          "password",
+          "isAdministrator",
+          "email"
+        ]
+      }
+    }
+  }
+}
