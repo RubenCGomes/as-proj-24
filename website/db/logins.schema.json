@@ -29,12 +29,17 @@
           "bio": {
             "type": "string",
             "description": "A short bio of the user"
+          },
+          "isDistributor": {
+            "type": "boolean",
+            "description": "Flag for distribution company user"
           }
         },
         "required": [
           "username",
           "password",
           "isAdministrator",
+          "isDistributor",
           "email"
         ]
       }
