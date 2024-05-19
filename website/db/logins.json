@@ -4,13 +4,15 @@
       "username": "admin",
       "email": "admin@onebox.com",
       "password": "admin",
-      "isAdministrator": true
+      "isAdministrator": true,
+      "bio": "I am an administrator"
     },
     {
       "username": "user",
       "email": "user@domain.com",
       "password": "user",
-      "isAdministrator": false
+      "isAdministrator": false,
+      "bio": "I am a user"
     }
   ]
 }

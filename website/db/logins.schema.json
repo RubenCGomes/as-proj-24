@@ -25,6 +25,10 @@
           "email": {
             "type": "string",
             "description": "The email of the user"
+          },
+          "bio": {
+            "type": "string",
+            "description": "A short bio of the user"
           }
         },
         "required": [
