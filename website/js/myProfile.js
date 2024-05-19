@@ -26,6 +26,19 @@ if (storedLogins) {
 // Fill forms on page load
 window.onload = function() { getInfo(); }
 
+// Listen for the log out button click
+document.getElementById('logout').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
+  logOut();
+});
+
+// Listen for the cancel button click
+document.getElementById('revert').addEventListener('click', function(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
+  // Redirect to the login page
+  window.location.href = 'lockers.html';
+});
+
 // Begin the process of updating the user's profile
 // Listen for the save button click
 document.getElementById('save').addEventListener('click', function(event) {
