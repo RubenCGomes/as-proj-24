@@ -1,4 +1,6 @@
+// Variable to get/store users
 var users;
+var storedLogins = localStorage.getItem('logins');
 
 window.onload = function() {
   document.getElementById('login').addEventListener('click', function(event) {
@@ -7,16 +9,20 @@ window.onload = function() {
   });
 };
 
-// Use the fetch API to get the JSON file
-fetch('../db/logins.json')
-  .then(response => response.json()) // Parse the data as JSON
-  .then(data => {
-    // Now data is the parsed JSON object from the file
-    console.log(data);
-    // Go one level deeper to get the array of users
-    users = data.logins;
-  })
-  .catch(error => console.error('Error:', error));
+// If there are logins in localStorage, use them
+if (storedLogins) {
+  users = JSON.parse(storedLogins);
+} else {
+  fetch('../db/logins.json')
+    .then(response => response.json()) // Parse the data as JSON
+    .then(data => {
+      // Now data is the parsed JSON object from the file
+      console.log(data);
+      // Go one level deeper to get the array of users
+      users = data.logins;
+    })
+    .catch(error => console.error('Error:', error));
+}
 
 function checkLogin(email, password) {
   // Check if the email and password match any user in the JSON object
