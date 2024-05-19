@@ -10,7 +10,7 @@
       "items": {
         "type": "object",
         "properties": {
-          "username": {
+          "name": {
             "type": "string",
             "description": "The username of the user"
           },
@@ -36,7 +36,7 @@
           }
         },
         "required": [
-          "username",
+          "name",
           "password",
           "isAdministrator",
           "isDistributor",

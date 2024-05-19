@@ -1,7 +1,7 @@
 {
   "logins": [
     {
-      "username": "admin",
+      "name": "admin",
       "email": "admin@onebox.com",
       "password": "admin",
       "isAdministrator": true,
@@ -9,7 +9,7 @@
       "bio": "I am an administrator"
     },
     {
-      "username": "user",
+      "name": "user",
       "email": "user@domain.com",
       "password": "user",
       "isAdministrator": false,
@@ -17,7 +17,7 @@
       "bio": "I am a user"
     },
     {
-      "username": "distributor",
+      "name": "distributor",
       "email": "distributor@dist-comp.com",
       "password": "distributor",
       "isAdministrator": false,

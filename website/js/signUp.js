@@ -6,6 +6,8 @@ window.onload = function() {
   document.getElementById('sign-up').addEventListener('click', function(event) {
     event.preventDefault(); // Prevent the form from submitting normally
     signUp();
+    // Redirect to the login page
+    window.location.href = 'login.html';
   });
 };
 
@@ -35,7 +37,7 @@ function signUp() {
   }
 
   // Add the new user to the JSON object
-  users.logins.push({email: email, password: password, name: name, isAdmin: false});
+  users.logins.push({email: email, password: password, name: name, isAdmin: false, isDistributor: false});
   console.log(users.logins);
 
   // Update the JSON data in localStorage
@@ -56,8 +58,6 @@ function signUp() {
       users.logins = JSON.parse(storedLogins);
       console.log(users.logins);
     }
-
   })
   .catch(error => console.error('Error:', error));
-
 }

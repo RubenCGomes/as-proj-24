@@ -5,41 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Profile</title>
     <link rel="stylesheet" href="../css/myProfile.css">
+
 </head>
 <body>
     <div class="container">
         <div class="header">
             <img src="../images/onebox-logo.png" alt="OneBox Logo">
             <nav class="nav">
-                <a href="#">Manual</a>
-                <a href="#">Map</a>
-                <a href="#">Lockers</a>
-                <a href="#">About us</a>
-                <a href="#" class="account">Your account</a>
+                <a href="manual.html">Manual</a>
+                <a href="map.html">Map</a>
+                <a href="lockers.html">Lockers</a>
+                <a href="about.html">About us</a>
+                <a href="myProfile.html" class="account">Your account</a>
             </nav>
         </div>
         <div class="profile-edit">
             <h2>Edit profile</h2>
             <form>
                 <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" name="username" placeholder="username123">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe">
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="email@domain.com">
+                    <input type="email" disabled="disabled" id="email" name="email" placeholder="email@domain.com">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password">
                 </div>
                 <div class="form-group">
                     <label for="bio">Bio</label>
                     <textarea id="bio" name="bio" rows="5" placeholder="Some custom bio."></textarea>
                 </div>
                 <div class="buttons">
-                    <button type="button" class="save">Save changes</button>
-                    <button type="button" class="revert">Revert Changes</button>
+                    <button type="submit" id="save" name="save" class="save">Save changes</button>
+                    <button type="button" id="revert" name="revert" class="revert">Revert Changes</button>
                 </div>
             </form>
             <button class="logout">Log Out</button>
         </div>
     </div>
 </body>
+<script src="../js/myProfile.js"></script>
 </html>
