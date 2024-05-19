@@ -1,56 +1,88 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
     margin: 0;
     padding: 0;
 }
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #014482;
-    padding: 10px 20px;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
 }
-.navbar a {
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+.header img {
+    height: 50px;
+}
+.nav {
+    display: flex;
+    gap: 20px;
+}
+.nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.nav a:hover {
+    text-decoration: underline;
+}
+.hero {
+    text-align: center;
+    margin: 50px 0;
+}
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
+.hero a {
+    padding: 15px 30px;
+    background-color: black;
     color: white;
     text-decoration: none;
-    padding: 14px 20px;
-}
-.navbar a:hover {
-    background-color: #ddd;
-    color: black;
-}
-.navbar .logo {
-    font-size: 20px;
     font-weight: bold;
-    background-color: aliceblue;
-    border-radius: 11px;
+    border-radius: 5px;
 }
-.navbar .menu {
+.hero a:hover {
+    background-color: #333;
+}
+.features {
     display: flex;
-}
-
-.partone {
-    display: flex;
-    background-color: aquamarine;
-    padding: 10px;
-    height: 510px;
-    position: relative;
-}
-
-.column {
-    flex: 1;
-    padding: 10px;
-}
-
-.left-column {
-    background-color: lightblue;
-}
-
-.right-column {
-    background-color: lightcoral;
-    margin-top: 50px;
+    justify-content: space-around;
     margin-bottom: 50px;
-    margin-left: 100px;
-    border-radius: 100px;
-    padding-left: ;
+}
+.feature {
+    text-align: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    width: 30%;
+}
+.feature img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+.feature h3 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+.feature p {
+    font-size: 1em;
+    color: #555;
+}
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    margin-top: 50px;
 }
