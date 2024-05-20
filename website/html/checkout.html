@@ -94,27 +94,39 @@
             cursor: pointer;
         }
         .footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px;
-            background-color: #fff;
-            border-top: 1px solid #ccc;
-            margin-top: 40px;
-        }
-        .footer div {
-            flex: 1;
-        }
-        .footer div:not(:last-child) {
-            margin-right: 20px;
-        }
-        .footer a {
-            color: #000;
-            text-decoration: none;
-        }
-        .footer p {
-            margin: 5px 0;
-        }
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7; /* Background color */
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.footer-left .social-icons a {
+    margin-right: 10px; /* Space between icons */
+}
+
+.footer-right .contact-info, .footer-right .footer-links {
+    margin-left: 20px;
+}
+
+.footer-right .contact-info a, .footer-right .footer-links a {
+    text-decoration: none;
+    color: black;
+    padding: 0 10px;
+}
+
+.footer-right .contact-info a:hover, .footer-right .footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-right p {
+    margin: 5px 0; /* Small vertical margin for better spacing */
+}
     </style>
 </head>
 <body>
@@ -180,26 +192,30 @@
             <input type="submit" value="APPLY">
             <hr>
             <p><strong>Total: 1,40 €</strong></p>
-            <input type="submit" value="Pagar">
+            <a href="../html/index.html"><input type="submit" value="Pagar"></a>
         </div>
     </div>
 
-    <footer class="footer">
+    <div class="footer">
         <div>
-            <img src="../images/onebox-logo.png" alt="Onebox Logo" style="width: 50px;">
+            <p>&copy; 2024 OneBox. All rights reserved.</p>
         </div>
-        <div>
-            <p><a href="#">Help | Contact us</a></p>
-            <p>+123 456 789 123</p>
-            <p>support@onebox.com</p>
-            <p>support.onebox.com</p>
+        <div class="footer-left">
+            <img src="../images/onebox-logo.png" alt="OneBox Logo">
+            <div class="social-icons">
+                <a href="https://www.facebook.com/"><img src="../images/facebook.png" alt="Facebook"style="width: 35px; height: 30px;" ></a>
+                <a href="https://x.com/i/flow/login"><img src="../images/twitter.png" alt="Twitter"style="width: 35px; height: 30px;"></a>
+                <a href="https://www.youtube.com/"><img src="../images/youtube.png" alt="YouTube"style="width: 35px; height: 30px;"></a>
+                <a href="https://www.instagram.com/"><img src="../images/instagram.png" alt="Instagram"style="width: 35px; height: 30px;"></a>
+            </div>
         </div>
-        <div>
-            <p><a href="lockers.html">Lockers</a></p>
-            <p><a href="about.html">About us</a></p>
-            <p><a href="map.html">Map</a></p>
-            <p><a href="manual.html">Manual</a></p>
-        </div>
-    </footer>
+        <div class="footer-right">
+            <div class="contact-info">
+                <a href="#">Help</a> | <a href="#">Contact us</a>
+                <p>+123 456 789 123</p>
+                <p>support@onebox.com</p>
+                <p>support.onebox.com</p>
+            </div>
+    </div>
 </body>
 </html>
