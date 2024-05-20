@@ -36,7 +36,7 @@ document.getElementById('logout').addEventListener('click', function(event) {
 document.getElementById('revert').addEventListener('click', function(event) {
   event.preventDefault(); // Prevent the form from submitting normally
   // Redirect to the login page
-  window.location.href = 'lockers.html';
+  window.location.href = 'index.html';
 });
 
 // Begin the process of updating the user's profile

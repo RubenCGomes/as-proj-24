@@ -19,7 +19,7 @@ if (storedLogins) {
       // Now data is the parsed JSON object from the file
       console.log(data);
       // Go one level deeper to get the array of users
-      users = data.logins;
+      users = data;
       // Store the logins in localStorage
       localStorage.setItem('logins', JSON.stringify(users));
     })
@@ -46,5 +46,6 @@ function login(){// Usage
     window.location.href = 'index.html';
   } else {
     console.log('Login failed');
+    alert('Login failed');
   }
 }
