@@ -58,7 +58,7 @@ function getInfo() {
   console.log(currentUser);
 
   // Get the user's profile
-  for (let user of users) {
+  for (let user of users.logins) {
     if (user.email === currentUser) {
       document.getElementById('name').value = user.name;
       document.getElementById('email').value = user.email;
@@ -74,7 +74,7 @@ function updateProfile() {
   let bio = document.getElementById('bio').value;
 
   // Update the user's profile
-  for (let user of users) {
+  for (let user of users.logins) {
     if (user.email === currentUser) {
       user.name = name;
       user.password = password;

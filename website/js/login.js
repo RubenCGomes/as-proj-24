@@ -28,7 +28,7 @@ if (storedLogins) {
 
 function checkLogin(email, password) {
   // Check if the email and password match any user in the JSON object
-  for (let user of users) {
+  for (let user of users.logins) {
     if (user.email === email && user.password === password) {
       // Store the current user's email in localStorage
       localStorage.setItem('currentUser', email);
@@ -43,7 +43,7 @@ function login(){// Usage
   let password = document.getElementById('password').value;
   if (checkLogin(email, password)) {
     console.log('Login successful');
-    window.location.href = 'index.html';
+    window.location.href = 'lockers.html';
   } else {
     console.log('Login failed');
     alert('Login failed');
