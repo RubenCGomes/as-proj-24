@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Onebox</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #285986;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+        }
+        .header img {
+            width: 100px;
+        }
+        .header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+        .header nav .account-btn {
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .checkout-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 40px;
+        }
+        .checkout-left, .checkout-right {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .checkout-left {
+            flex: 1;
+            margin-right: 20px;
+        }
+        .checkout-right {
+            width: 300px;
+        }
+        .checkout-left h1, .checkout-right h2 {
+            margin-top: 0;
+        }
+        .checkout-left input[type="text"],
+        .checkout-left input[type="email"],
+        .checkout-left input[type="tel"],
+        .checkout-left select {
+            width: calc(50% - 10px);
+            padding: 10px;
+            margin: 10px 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .checkout-left input[type="checkbox"] {
+            margin-right: 5px;
+        }
+        .checkout-right .cart-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .checkout-right .cart-item img {
+            width: 60px;
+            margin-right: 20px;
+        }
+        .checkout-right input[type="text"] {
+            width: calc(100% - 90px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .checkout-right input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #ccc;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #fff;
+            border-top: 1px solid #ccc;
+            margin-top: 40px;
+        }
+        .footer div {
+            flex: 1;
+        }
+        .footer div:not(:last-child) {
+            margin-right: 20px;
+        }
+        .footer a {
+            color: #000;
+            text-decoration: none;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <img src="../images/onebox-logo.png" alt="Onebox Logo">
+        <nav>
+            <a href="manual.html">Manual</a>
+            <a href="map.html">Map</a>
+            <a href="lockers.html">Lockers</a>
+            <a href="about.html">About us</a>
+            <a href="myProfile.html" class="account-btn">Your account</a>
+        </nav>
+    </header>
+
+    <div class="checkout-container">
+        <div class="checkout-left">
+            <h1>Checkout</h1>
+            <h3>Choose a payment type:</h3>
+            <form>
+                <input type="radio" name="payment" value="MBWay" id="mbway">
+                <label for="mbway">MBWay</label><br>
+                <input type="radio" name="payment" value="PayPal" id="paypal">
+                <label for="paypal">PayPal</label><br>
+                <input type="radio" name="payment" value="credit-card" id="credit-card">
+                <label for="credit-card">Credit / Debit Card</label>
+
+                <h3>Contact information</h3>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="tel" name="phone" placeholder="Phone" required>
+                <div>
+                    <input type="checkbox" id="news-offers">
+                    <label for="news-offers">Email me to get the news and offers</label>
+                </div>
+
+                <h3>Shipping address</h3>
+                <input type="text" name="first-name" placeholder="First Name" required>
+                <input type="text" name="last-name" placeholder="Last Name" required><br>
+                <input type="text" name="company" placeholder="Company (optional)">
+                <input type="text" name="address" placeholder="Address" required><br>
+                <input type="text" name="city" placeholder="City" required>
+                <select name="country" required>
+                    <option value="">Country/region</option>
+                    <!-- Add more country options as needed -->
+                </select>
+                <input type="text" name="state" placeholder="State">
+            </form>
+        </div>
+        <div class="checkout-right">
+            <h2>In your cart</h2>
+            <div class="cart-item">
+                <img src="../images/big-locker.png" alt="Locker Image">
+                <div>
+                    <p><strong>Large Locker (200cmx150)</strong></p>
+                    <p>2 days</p>
+                    <p>0,70 € x2</p>
+                </div>
+            </div>
+            <hr>
+            <p>Subtotal: 1,40 €</p>
+            <input type="text" placeholder="ClientCard">
+            <input type="submit" value="APPLY">
+            <input type="text" placeholder="PromoCode">
+            <input type="submit" value="APPLY">
+            <hr>
+            <p><strong>Total: 1,40 €</strong></p>
+            <input type="submit" value="Pagar">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div>
+            <img src="../images/onebox-logo.png" alt="Onebox Logo" style="width: 50px;">
+        </div>
+        <div>
+            <p><a href="#">Help | Contact us</a></p>
+            <p>+123 456 789 123</p>
+            <p>support@onebox.com</p>
+            <p>support.onebox.com</p>
+        </div>
+        <div>
+            <p><a href="lockers.html">Lockers</a></p>
+            <p><a href="about.html">About us</a></p>
+            <p><a href="map.html">Map</a></p>
+            <p><a href="manual.html">Manual</a></p>
+        </div>
+    </footer>
+</body>
+</html>
