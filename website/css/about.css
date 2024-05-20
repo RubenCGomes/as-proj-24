@@ -141,7 +141,7 @@ body {
     width: 90%;
     display: flex;
     justify-content: space-between;
-    transform: translateY(-50%);
+    transform: translateY(10000%);
 }
 
 .slider .buttons button {
@@ -187,6 +187,43 @@ body {
 .slider .dots li.active {
     width: 30px;
 }
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f7f7f7; /* Background color */
+}
+
+.footer-left, .footer-right {
+    display: flex;
+    align-items: center;
+}
+
+.footer-left .social-icons a {
+    margin-right: 10px; /* Space between icons */
+}
+
+.footer-right .contact-info, .footer-right .footer-links {
+    margin-left: 20px;
+}
+
+.footer-right .contact-info a, .footer-right .footer-links a {
+    text-decoration: none;
+    color: black;
+    padding: 0 10px;
+}
+
+.footer-right .contact-info a:hover, .footer-right .footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-right p {
+    margin: 5px 0; /* Small vertical margin for better spacing */
+}
+
+
 
 @media screen and (max-width: 768px) {
     .slider {
