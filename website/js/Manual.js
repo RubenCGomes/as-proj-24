@@ -1,3 +1,7 @@
+// Load the logins from localStorage (if any)
+// All logins will be stored in localStorage!
+syncData();
+
 let slider = document.querySelector('.slider .list');
 let items = document.querySelectorAll('.slider .list .item');
 let next = document.getElementById('next');

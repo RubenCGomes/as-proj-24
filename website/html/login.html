@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Onebox</title>
     <link rel="stylesheet" href="../css/login.css">
+    <!-- sync data between pages! -->
+    <script src="../js/syncData.js"></script>
     <script src="../js/login.js"></script>
 </head>
 <body>
@@ -12,8 +14,8 @@
         <img src="../images/onebox-logo.png" alt="Onebox Logo">
         <h2>Login to your account</h2>
         <form action="/login" method="POST">
-            <input type="email" name="email" id="email" placeholder="email@domain.com" required>
-            <input type="password" name="password" id="password" placeholder="Password" required>
+            <label for="email"></label><input type="email" name="email" id="email" placeholder="email@domain.com" required>
+            <label for="password"></label><input type="password" name="password" id="password" placeholder="Password" required>
             <input type="submit" value="Login" id="login">
         </form>
         <p>or <a href="signUp.html" class="signup-btn">Sign up</a></p>
