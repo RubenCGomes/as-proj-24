@@ -1,25 +1,26 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    background-color: #e6f0ff; 
     margin: 0;
     padding: 0;
 }
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto; 
     padding: 20px;
     background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
 }
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 0;
-    border-bottom: 1px solid #ddd;
+    padding: 20px 0; 
+    border-bottom: 2px solid #014482; 
 }
 .header img {
     height: 50px;
-
 }
 .nav {
     display: flex;
@@ -27,7 +28,7 @@ body {
 }
 .nav a {
     text-decoration: none;
-    color: black;
+    color: #014482; 
     font-weight: bold;
 }
 .nav a:hover {
@@ -49,9 +50,11 @@ body {
 .locker {
     text-align: center;
     padding: 20px;
-    background-color: #f7f7f7;
+    background-color: #e7ecf3;
     border-radius: 5px;
     width: 30%;
+    margin: 0 10px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 .locker img {
     max-width: 100%;
@@ -76,7 +79,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #f7f7f7; /* Background color */
+    background-color: #f7f7f7; 
 }
 
 .footer-left, .footer-right {
@@ -85,7 +88,7 @@ body {
 }
 
 .footer-left .social-icons a {
-    margin-right: 10px; /* Space between icons */
+    margin-right: 10px; 
 }
 
 .footer-right .contact-info, .footer-right .footer-links {
@@ -103,5 +106,47 @@ body {
 }
 
 .footer-right p {
-    margin: 5px 0; /* Small vertical margin for better spacing */
+    margin: 5px 0; 
+}
+
+
+.container-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+.buttons-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0; 
+}
+.butao, .butao2 {
+    flex: 1; 
+    text-align: center;
+    margin: 0 10px; 
+}
+.butao button, .butao2 button {
+    width: 100%; 
+    padding: 15px 20px;
+    background-color: #014482;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px; 
+}
+.butao button:hover, .butao2 button:hover {
+    background-color: #012f62;
+}
+.Description {
+    margin-left: 20px;
+    text-align: center; 
+}
+.Description h3 {
+    color: #014482;
+}
+.Description p {
+    font-size: 16px;
+    line-height: 1.5;
 }

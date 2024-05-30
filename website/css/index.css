@@ -1,21 +1,22 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f7f7f7;
+    background-color: #e6f0ff; 
     margin: 0;
     padding: 0;
 }
 .container {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 20px auto; 
     padding: 20px;
     background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 .header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 0;
-    border-bottom: 1px solid #ddd;
+    padding: 20px 0; 
+    border-bottom: 2px solid #014482;
 }
 .header img {
     height: 50px;
@@ -26,7 +27,7 @@ body {
 }
 .nav a {
     text-decoration: none;
-    color: black;
+    color: #014482; 
     font-weight: bold;
 }
 .nav a:hover {
@@ -46,14 +47,14 @@ body {
 }
 .hero a {
     padding: 15px 30px;
-    background-color: black;
+    background-color: #014482; 
     color: white;
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
 }
 .hero a:hover {
-    background-color: #333;
+    background-color: #012f62; 
 }
 .features {
     display: flex;
@@ -63,8 +64,9 @@ body {
 .feature {
     text-align: center;
     padding: 20px;
-    background-color: #f7f7f7;
-    border-radius: 5px;
+    background-color: #e7ecf3;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
     width: 30%;
 }
 .feature img {
@@ -85,32 +87,26 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #f7f7f7; /* Background color */
+    background-color: #f7f7f7; 
 }
-
 .footer-left, .footer-right {
     display: flex;
     align-items: center;
 }
-
 .footer-left .social-icons a {
-    margin-right: 10px; /* Space between icons */
+    margin-right: 10px; 
 }
-
 .footer-right .contact-info, .footer-right .footer-links {
     margin-left: 20px;
 }
-
 .footer-right .contact-info a, .footer-right .footer-links a {
     text-decoration: none;
     color: black;
     padding: 0 10px;
 }
-
 .footer-right .contact-info a:hover, .footer-right .footer-links a:hover {
     text-decoration: underline;
 }
-
 .footer-right p {
-    margin: 5px 0; /* Small vertical margin for better spacing */
+    margin: 5px 0; 
 }

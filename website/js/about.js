@@ -1,9 +1,6 @@
-// Sync data between pages
-syncData();
-
 document.addEventListener('DOMContentLoaded', () => {
     let slider = document.querySelector('.slider .list');
-    let items = document.querySelectorAll('.slider .list .item');
+    let items = document.querySelectorAll('.slider .item');
     let next = document.getElementById('next');
     let prev = document.getElementById('prev');
     let dots = document.querySelectorAll('.slider .dots li');
