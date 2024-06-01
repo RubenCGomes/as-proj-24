@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OneBox - Home</title>
-    <link rel="stylesheet" href="../css/Manual.css">
+    <link rel="stylesheet" href="../css/map.css">
     <!-- sync data between pages! -->
     <script src="../js/syncData.js"></script>
+    <!-- LeaftLet CSS e JavaScript -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.2/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+    <!-- Map JS -->
+    <script src="../js/map.js" defer></script>
 </head>
 <body>
     <div class="container">
@@ -23,17 +28,7 @@
         <div class="hero">
             <h1>Map OneBox</h1>
             <p>Interactive map of our lockers</p>
-        </div>
-        <div>
-            <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5273
-            .375892340327!2d8.654114512795418!3d40.63174974379728!2m3!1f0!2f0!3f0!3m2!1i102
-            4!2i768!4f13.1!3m3!1m2!1s0xd23a2ab00bfffff%3A0x67764ab06c26f19a
-            !2sEdif%C3%ADcio%20Central%20e%20da%20Reitoria!5e0!3m2!1sen!2sp
-            t!4v1676846463624!5m2!1sen!2spt”"
-            width="1200" height="450”
-            frameborder="0">
-            </iframe>
+            <div id="map" style="height: 500px; width: 100%;"></div>
         </div>
         <div class="footer">
             <div>
@@ -58,6 +53,5 @@
             </div>
         </div>
     </div>
-    <script src="../js/Manual.js"></script>
 </body>
 </html>
