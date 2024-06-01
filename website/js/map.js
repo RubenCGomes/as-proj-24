@@ -1,3 +1,6 @@
+// Sync data between pages
+syncData();
+
 // Initialize the map centered on a specific location and set the zoom level
 let map = L.map('map').setView([40.62840934394173, -8.648807713234888], 17  );
 

@@ -3,7 +3,7 @@
 syncData();
 
 // Variable to get/store users
-var users;
+let users = JSON.parse(localStorage.getItem('logins'));
 
 // Listen for the sign-up button click
 window.onload = function() {
@@ -22,15 +22,15 @@ function signUp() {
   let password = document.getElementById('password').value;
 
   // Check if the email is already in use
-  for (let user of users.logins) {
+  for (let user of users) {
     if (user.email === email) {
       return false; // Email is already in use
     }
   }
 
   // Add the new user to the JSON object
-  users.logins.push({email: email, password: password, name: name, isAdmin: false, isDistributor: false});
-  console.log(users.logins);
+  users.push({email: email, password: password, name: name, isAdmin: false, isDistributor: false});
+  console.log(users);
 
   // Update the JSON data in localStorage
   localStorage.setItem('logins', JSON.stringify(users));

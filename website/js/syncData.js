@@ -8,8 +8,7 @@ function syncData(){
 
   // Load the logins from localStorage (if any)
   if (storedLogins) {
-    users = JSON.parse(storedLogins);
-    console.log(users);
+    console.log('Logins already loaded');
   } else {
     // Use the fetch API to get the JSON file
     fetch('../db/logins.json')
@@ -19,6 +18,9 @@ function syncData(){
         console.log(data);
         // Go one level deeper to get the array of users
         users = data.logins;
+        console.log(users);
+        // Store the logins in localStorage
+        localStorage.setItem('logins', JSON.stringify(users));
       })
       .catch(error => console.error('Error:', error));
   }
