@@ -41,17 +41,17 @@ marker3.bindPopup(`
 function option1(pos) {
     // Store data between pages
     sessionStorage.setItem('lockerPosition', pos);
-    window.location.href = "LockerPequeno.html";
+    window.location.href = "smallLocker.html";
 }
 
 function option2(pos) {
      // Store data between pages
     sessionStorage.setItem('lockerPosition', pos);
-    window.location.href = "LockerMedio.html";
+    window.location.href = "mediumLocker.html";
 }
 
 function option3(pos) {
     // Store data between pages
     sessionStorage.setItem('lockerPosition', pos);
-    window.location.href = "LockerGrande.html";
+    window.location.href = "largeLocker.html";
 }
