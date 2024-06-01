@@ -1,5 +1,21 @@
 syncData();
 
+// Update the locker header with the chosen location
+function updateLockerHeader() {
+  let pos = localStorage.getItem('lockerPosition');
+  console.log(pos);
+  if (pos !== null) {
+    document.getElementById("locker-type").textContent = document.getElementById("locker-type").textContent + ' - ' + pos;
+    localStorage.removeItem('lockerPosition');
+  }
+}
+
+updateLockerHeader();
+
+// ----------------------------
+// --- Calendar starts here ---
+// ----------------------------
+
 const header = document.querySelector(".calendar h3");
 const dates = document.querySelector(".dates");
 const navs = document.querySelectorAll("#prev, #next");
@@ -24,6 +40,15 @@ let month = date.getMonth();
 let year = date.getFullYear();
 let selectedDates = [];
 
+// Preset of occupied dates
+let occupiedDates = {
+  '2024-0': [1, 2, 3], // January 2024
+  '2024-4': [4, 5, 6], // February 2024
+  '2024-5': [7, 8, 9, 10], // December 2023
+  // ... and so on for each month and year
+};
+
+
 function renderCalendar() {
   const start = new Date(year, month, 1).getDay();
   const endDate = new Date(year, month + 1, 0).getDate();
@@ -36,6 +61,8 @@ function renderCalendar() {
     datesHtml += `<li class="inactive">${endDatePrev - i + 1}</li>`;
   }
 
+  let currentMonthOccupiedDates = occupiedDates[`${year}-${month}`] || [];
+
   for (let i = 1; i <= endDate; i++) {
     let className =
       i === date.getDate() &&
@@ -43,6 +70,9 @@ function renderCalendar() {
       year === new Date().getFullYear()
         ? ' class="today"'
         : "";
+    if (currentMonthOccupiedDates.includes(i)) {
+      className = ' class="red"';
+    }
     if (selectedDates.includes(i)) {
       className = ' class="selected"';
     }
@@ -58,17 +88,21 @@ function renderCalendar() {
 
   const dateElements = dates.querySelectorAll("li:not(.inactive)");
   dateElements.forEach((el) => {
-    el.addEventListener("click", (e) => {
-      const day = parseInt(e.target.textContent);
-      if (selectedDates.includes(day)) {
-        selectedDates = selectedDates.filter(d => d !== day);
-        e.target.classList.remove("selected");
-      } else {
-        selectedDates.push(day);
-        e.target.classList.add("selected");
-      }
-      console.log(selectedDates); // This will log the selected dates to the console
-    });
+  el.addEventListener("click", (e) => {
+    const day = parseInt(e.target.textContent);
+    if (currentMonthOccupiedDates.includes(day)) {
+      // If the date is in the occupiedDates array, prevent the selection
+      return;
+    }
+    if (selectedDates.includes(day)) {
+      selectedDates = selectedDates.filter(d => d !== day);
+      e.target.classList.remove("selected");
+    } else {
+      selectedDates.push(day);
+      e.target.classList.add("selected");
+    }
+    console.log(selectedDates); // This will log the selected dates to the console
+  });
   });
 }
 

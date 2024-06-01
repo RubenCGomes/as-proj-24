@@ -323,3 +323,8 @@ border-radius: 20%;
 .footer-right .contact-info a:hover, .footer-right .footer-links a:hover {
   text-decoration: underline;
 }
+
+.dates li.red {
+  background-color: red;
+  color: white;
+}
