@@ -147,9 +147,11 @@ body {
 }
 
 .slider .buttons button {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin-left: -4500px;
+    margin-right: -4500px;
+    border-radius: 0%;
     background-color: #fff5;
     color: white;
     border: none;
@@ -191,7 +193,7 @@ body {
 }
 
 .footer {
-    display: flex;
+    display: flex; 
     justify-content: space-between;
     align-items: center;
     padding: 20px;
