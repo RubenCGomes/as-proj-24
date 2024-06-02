@@ -2,7 +2,13 @@
 // All logins will be stored in localStorage!
 syncData();
 
-let users = JSON.parse(localStorage.getItem('logins'));
+let users;
+
+(async () => {
+  await syncData();
+  users = JSON.parse(localStorage.getItem('logins'));
+  console.log(JSON.parse(localStorage.getItem('logins')));
+})();
 
 window.onload = function() {
   document.getElementById('login').addEventListener('click', function(event) {

@@ -1,4 +1,4 @@
-function syncData(){
+async function syncData(){
   let users;
   let storedLogins = localStorage.getItem('logins');
 
@@ -11,7 +11,7 @@ function syncData(){
     console.log('Logins already loaded');
   } else {
     // Use the fetch API to get the JSON file
-    fetch('../db/logins.json')
+    await fetch('../db/logins.json')
       .then(response => response.json()) // Parse the data as JSON
       .then(data => {
         // Now data is the parsed JSON object from the file
