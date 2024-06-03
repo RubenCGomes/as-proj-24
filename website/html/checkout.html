@@ -7,37 +7,7 @@
     <link rel="stylesheet" href="../css/checkout.css">
     <!-- sync data between pages! -->
     <script src="../js/syncData.js"></script>
-    <script>
-        function showPaymentFields() {
-            const paypalField = document.getElementById('paypal-field');
-            const cardFields = document.getElementById('card-fields');
-            const paymentType = document.querySelector('input[name="payment"]:checked').value;
-
-            paypalField.style.display = 'none';
-            cardFields.style.display = 'none';
-
-            if (paymentType === 'PayPal') {
-                paypalField.style.display = 'block';
-            } else if (paymentType === 'credit-card') {
-                cardFields.style.display = 'block';
-            }
-        }
-
-        document.addEventListener('DOMContentLoaded', () => {
-            const paymentOptions = document.querySelectorAll('input[name="payment"]');
-            paymentOptions.forEach(option => {
-                option.addEventListener('change', showPaymentFields);
-            });
-        });
-
-        function completePayment(event) {
-            event.preventDefault();
-            alert('Pagamento completado');
-            setTimeout(() => {
-                window.location.href = '../html/index.html';
-            }, 500); // 0.5 second delay before redirect
-        }
-    </script>
+    <script src="../js/checkout.js" defer></script>
 </head>
 <body>
     <header class="header">
@@ -75,20 +45,20 @@
                 </div>
 
                 <h3>Contact information</h3>
-                <input type="email" name="email" placeholder="Email" required>
-                <input type="tel" name="phone" placeholder="Phone" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="tel" id="phone" name="phone" placeholder="Phone" required>
                 <div>
                     <input type="checkbox" id="news-offers">
                     <label for="news-offers">Email me to get the news and offers</label>
                 </div>
 
                 <h3>Shipping address</h3>
-                <input type="text" name="first-name" placeholder="First Name" required>
-                <input type="text" name="last-name" placeholder="Last Name" required><br>
-                <input type="text" name="company" placeholder="Company (optional)">
-                <input type="text" name="address" placeholder="Address" required><br>
-                <input type="text" name="city" placeholder="City" required>
-                <select name="country" required>
+                <input type="text" id="first-name" name="first-name" placeholder="First Name" required>
+                <input type="text" id="last-name" name="last-name" placeholder="Last Name" required><br>
+                <input type="text" id="company" name="company" placeholder="Company (optional)">
+                <input type="text" id="address" name="address" placeholder="Address" required><br>
+                <input type="text" id="city" name="city" placeholder="City" required>
+                <select id="country" name="country" required>
                     <option value="">Country/region</option>
                     <!-- Add more country options as needed -->
                     <option value="AR">Argentina</option>
@@ -131,28 +101,30 @@
                     <option value="GB">United Kingdom</option>
                     <option value="US">United States</option>
                 </select>
-                <input type="text" name="state" placeholder="State">
             </form>
         </div>
         <div class="checkout-right">
             <h2>In your cart</h2>
             <div class="cart-item">
-                <img src="../images/big-locker.png" alt="Big Locker">
+                <img id="locker-image" src="../images/big-locker.png" alt="Big Locker">
                 <div>
-                    <p><strong>Large Locker (200cmx150)</strong></p>
-                    <p>2 days</p>
-                    <p>0,70 € x2</p>
+                    <p><strong id="locker-type">Large Locker (200cmx150)</strong></p>
+                    <p id="dates">2 days</p>
+                    <p id="unit">0,70 €</p>
                 </div>
             </div>
             <hr>
-            <p>Subtotal: 1,40 €</p>
-            <input type="text" placeholder="ClientCard">
-            <input type="submit" value="APPLY">
-            <input type="text" placeholder="PromoCode">
-            <input type="submit" value="APPLY">
+            <p id="subtotal">Subtotal: </p>
+            <input type="text" id="client-card" placeholder="ClientCard">
+            <div id="card-notification"></div>
+            <input type="submit" id="submit-card" value="APPLY">
+
+            <input type="text" id="promo-code" placeholder="PromoCode">
+            <div id="code-notification"></div>
+            <input type="submit" id="submit-code" value="APPLY">
             <hr>
-            <p><strong>Total: 1,40 €</strong></p>
-            <input type="submit" value="Pay" onclick="completePayment(event)">
+            <p><strong id="total">Total: 1,40 €</strong></p>
+            <input type="submit" id="submit" value="Pay" onclick="">
         </div>
     </div>
 
