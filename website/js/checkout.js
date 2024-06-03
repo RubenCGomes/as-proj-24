@@ -19,7 +19,7 @@ let numberOfDates = localStorage.getItem('numberOfDates');
 let locker = localStorage.getItem('locker');
 let image = localStorage.getItem('image');
 let dailyPrice = localStorage.getItem('dailyPrice');
-let currentUser = localStorage.getItem('currentUser');
+let currentUser = sessionStorage.getItem('currentUser');
 
 // Display the daily price on the page
 document.getElementById('unit').textContent = dailyPrice + ' € ';

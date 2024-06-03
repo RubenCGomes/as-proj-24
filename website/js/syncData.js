@@ -3,7 +3,7 @@ async function syncData(){
   let storedLogins = localStorage.getItem('logins');
 
   // Get the current user's email
-  let currentUser = localStorage.getItem('currentUser');
+  let currentUser = sessionStorage.getItem('currentUser');
   console.log(currentUser);
 
   // Load the logins from localStorage (if any)

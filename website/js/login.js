@@ -21,8 +21,8 @@ function checkLogin(email, password) {
   // Check if the email and password match any user in the JSON object
   for (let user of users) {
     if (user.email === email && user.password === password) {
-      // Store the current user's email in localStorage
-      localStorage.setItem('currentUser', email);
+      // Store the current user's email in sessionStorage
+      sessionStorage.setItem('currentUser', email);
       return true; // Login successful
     }
   }

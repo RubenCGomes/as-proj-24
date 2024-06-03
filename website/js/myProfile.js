@@ -2,7 +2,7 @@
 // All logins will be stored in localStorage!
 syncData();
 
-if (localStorage.getItem('currentUser') === null) {
+if (sessionStorage.getItem('currentUser') === null) {
   alert('You must be logged in first!');
   window.history.back();
 }
@@ -10,7 +10,7 @@ if (localStorage.getItem('currentUser') === null) {
 let users = JSON.parse(localStorage.getItem('logins'));
 
 // Get the current user's email
-let currentUser = localStorage.getItem('currentUser');
+let currentUser = sessionStorage.getItem('currentUser');
 console.log(currentUser);
 
 // Fill forms on page load
@@ -44,7 +44,7 @@ document.getElementById('save').addEventListener('click', function(event) {
 // Fill the page with the user's profile information
 function getInfo() {
   // Get the current user's email
-  let currentUser = localStorage.getItem('currentUser');
+  let currentUser = sessionStorage.getItem('currentUser');
   console.log(currentUser);
 
   // Get the user's profile
@@ -60,7 +60,18 @@ function getInfo() {
 function updateProfile() {
   // Get the form values
   let name = document.getElementById('name').value;
-  let password = document.getElementById('password').value;
+  let password;
+
+  if (document.getElementById('password').value === '') {
+    for (let user of users) {
+      if (user.email === currentUser) {
+        password = user.password;
+      }
+  }
+  } else {
+    password = document.getElementById('password').value;
+  }
+
   let bio = document.getElementById('bio').value;
 
   // Update the user's profile
@@ -78,7 +89,7 @@ function updateProfile() {
 }
 
 function logOut() {
-  // Remove the current user from localStorage
-  localStorage.removeItem('currentUser');
+  // Remove the current user from sessionStorage
+  sessionStorage.removeItem('currentUser');
   window.location.href = 'index.html';
 }
