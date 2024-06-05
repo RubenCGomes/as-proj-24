@@ -2,7 +2,7 @@
   "id": "9149909b-e237-4c3d-8399-346f13b1a413",
   "version": "2.0",
   "name": "as-proj-24",
-  "url": "http://localhost:63342/as-proj-24/website/html/index.html?_ijt=q0ftt3v6ejbu482gj2q047bfd4&_ij_reload=RELOAD_ON_SAVE",
+  "url": "https://onebox.tiagorg.pt",
   "tests": [{
     "id": "f2b06bfe-f521-4a25-9dc0-3414da2bb026",
     "name": "sign-up",
@@ -10,7 +10,7 @@
       "id": "03c08c94-e0d7-4d19-a60d-2fe7b0bcdce6",
       "comment": "",
       "command": "open",
-      "target": "http://localhost:63342/as-proj-24/website/html/index.html?_ijt=q0ftt3v6ejbu482gj2q047bfd4&_ij_reload=RELOAD_ON_SAVE",
+      "target": "https://onebox.tiagorg.pt",
       "targets": [],
       "value": ""
     }, {
@@ -210,7 +210,7 @@
       "id": "812e61cc-213a-4e0d-b046-f58e45b50b43",
       "comment": "",
       "command": "open",
-      "target": "http://localhost:63342/as-proj-24/website/html/index.html?_ijt=q0ftt3v6ejbu482gj2q047bfd4&_ij_reload=RELOAD_ON_SAVE",
+      "target": "https://onebox.tiagorg.pt",
       "targets": [],
       "value": ""
     }, {
@@ -519,7 +519,7 @@
       "id": "c84b6885-395a-4eb3-aa0f-9f202b618358",
       "comment": "",
       "command": "open",
-      "target": "http://localhost:63342/as-proj-24/website/html/index.html?_ijt=q0ftt3v6ejbu482gj2q047bfd4&_ij_reload=RELOAD_ON_SAVE",
+      "target": "https://onebox.tiagorg.pt",
       "targets": [],
       "value": ""
     }, {
@@ -975,7 +975,7 @@
       "id": "52724a16-987c-4ab8-8b94-6fc43938f28d",
       "comment": "",
       "command": "open",
-      "target": "http://localhost:63342/as-proj-24/website/html/index.html?_ijt=q0ftt3v6ejbu482gj2q047bfd4&_ij_reload=RELOAD_ON_SAVE",
+      "target": "https://onebox.tiagorg.pt",
       "targets": [],
       "value": ""
     }, {
@@ -1181,6 +1181,6 @@
     "timeout": 300,
     "tests": ["f2b06bfe-f521-4a25-9dc0-3414da2bb026"]
   }],
-  "urls": ["http://localhost:63342/as-proj-24/website/html/index.html?_ijt=q0ftt3v6ejbu482gj2q047bfd4&_ij_reload=RELOAD_ON_SAVE"],
+  "urls": ["http://localhost:63342/as-proj-24/website/html/index.html?_ijt=q0ftt3v6ejbu482gj2q047bfd4&_ij_reload=RELOAD_ON_SAVE", "https://onebox.tiagorg.pt/"],
   "plugins": []
 }
