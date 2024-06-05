@@ -24,7 +24,7 @@
 
 ### Contas existentes:
 
-Inicalmente, as contas disponíveis são as seguintes (incluídas no [seguinte ficheiro](db/logins.json)) (email-password):
+Inicialmente, as contas disponíveis são as seguintes (incluídas no [seguinte ficheiro](website/db/logins.json)) (email-password):
 
 * admin
 	* admin@onebox.com
